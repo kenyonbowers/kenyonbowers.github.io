@@ -1,0 +1,24 @@
+body {
+    background-color: #cacaca;
+    font-family: "Sofia", sans-serif;
+}
+
+.Container{
+    width: 100%;
+    height: auto;
+}
+
+.ButtonImg{
+    width: 30%;
+    height: auto;
+}
+
+h1{
+    color: black;
+    font-size: 300%;
+}
+
+p{
+    font-size: 100%;
+    color: black;
+}

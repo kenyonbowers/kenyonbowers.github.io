@@ -1,0 +1,25 @@
+h1{
+    color: black;
+    font-size: 300%;
+}
+
+.HomeButton{
+    margin-left: 50em;
+}
+
+p{
+    font-size: 100%;
+}
+
+body{
+    font-family: "Sofia", sans-serif;
+    background-color: rgb(233, 232, 232);
+}
+
+#DSCdiscordButton{
+    background-color: rgb(126, 126, 245);
+    border-color: rgb(111, 111, 214);
+}
+#DSCITCH{
+    margin-top: 1em;
+}
