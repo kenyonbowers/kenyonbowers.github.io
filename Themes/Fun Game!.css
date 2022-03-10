@@ -1,0 +1,17 @@
+h1{
+    font-size: 300%;
+}
+
+.HomeButton{
+    margin-left: 50em;
+}
+
+p{
+    font-size: 100%;
+}
+
+body{
+    color: whitesmoke;
+    font-family: "Sofia", sans-serif;
+    background-color: rgb(105, 105, 105);
+}
