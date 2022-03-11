@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="./Themes/Home.css" />
 </head>
 <body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
     <h1>Hello! Welcome to the BowersIndustry website!</h1>
     <h3>BowersIndustry was established on 1/27/2020! We have been making video games and software ever since! You can check some of it out below.</h3>
 
@@ -32,9 +36,21 @@
     <div class="Container">
     <input class="ButtonImg" type="image" src="./Images/Jet Pack Puppy.png" onclick="location.href='./Pages/Adventures of Harry FurBall.html'" />
     </div>
+
     <p>Fun Game! is about Fred trying to save his friends from the baddies!</p>
     <div class="Container">
     <input class="ButtonImg" type="image" src="./Images/Fun Game! Logo.png" onclick="location.href='./Pages/Fun Game!.html'" />
     </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><button onclick="location.href='./Pages/DS Creator.html'" >DS Creator</button></br>
+        <br><button onclick="location.href='./Pages/DeS.html'" >DeS</button></br>
+        <br><button onclick="location.href='./Pages/Adventures of Harry FurBall.html'" >Adventures of Harry FurBall</button></br>
+        <br><button onclick="location.href='./Pages/Fun Game!.html'" >Fun Game!</button></br>
+    </div>
+
+    <script src="./Code/NavBar.js" ></script>
+
 </body>
 </html>

@@ -13,16 +13,38 @@
     <link rel="stylesheet" href="../Themes/DeS.css" />
 </head>
 <body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
     <input class="HomeButton" type="image" src="../Images/BowersIndustry Logo.png" onclick="location.href='../index.html'" width="30%" height="30%" />
     <h1>DeS</h1>
-    <img src="../Images/DeS Cover.png" />
+
+    <div class="Container">
+    <img class="IMAGE" src="../Images/DeS Cover.png" />
+    </div>
+
     <p>DeS is a DS game made with DS Game Maker. It was made in 2 weeks!</p>
     <p>DeS is a DS that fell off a truck that was headed for the Nintendo store. He must jump over DS cartridges and beat the boss to get to the Nintendo store!</p>
     <p>It is your job to help him! Are you up for the challenge?</p>
     
-    <iframe frameborder="0" src="https://itch.io/embed/1424310?bg_color=ffffff&amp;fg_color=222222&amp;link_color=0484d1&amp;border_color=bebebe" width="552" height="167"><a href="https://bowersindustry.itch.io/des">DeS by BowersIndustry</a></iframe>
+    <div class="Container">
+    <iframe class="EMBED" frameborder="0" src="https://itch.io/embed/1424310?bg_color=ffffff&amp;fg_color=222222&amp;link_color=0484d1&amp;border_color=bebebe" width="552" height="167"><a href="https://bowersindustry.itch.io/des">DeS by BowersIndustry</a></iframe>
+    </div>
 
-    <br><img class="Screenshot" id="DeS1" src="../Images/DeS_Screenshot_1.png" width="540" height="809.5" />
-    <img class="Screenshot" id="DeS2" src="../Images/DeS_Screenshot_2.png" width="540" height="809.5" /><br/>
+    <div class="Container">
+    <br><img class="IMAGE" id="DeS1" src="../Images/DeS_Screenshot_1.png" width="540" height="809.5" />
+    <img class="IMAGE" id="DeS2" src="../Images/DeS_Screenshot_2.png" width="540" height="809.5" /><br/>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><button onclick="location.href='../index.html'" >Home</button></br>
+        <br><button onclick="location.href='./DS Creator.html'" >DS Creator</button></br>
+        <br><button onclick="location.href='./Adventures of Harry FurBall.html'" >Adventures of Harry FurBall</button></br>
+        <br><button onclick="location.href='./Fun Game!.html'" >Fun Game!</button></br>
+    </div>
+
+    <script src="../Code/NavBar.js" ></script>
 </body>
 </html>

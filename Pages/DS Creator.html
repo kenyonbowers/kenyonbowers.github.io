@@ -13,6 +13,10 @@
     <link rel="stylesheet" href="../Themes/DS Creator.css" />
 </head>
 <body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
     <input class="HomeButton" type="image" src="../Images/BowersIndustry Logo.png" onclick="location.href='../index.html'" width="30%" height="30%" />
     <h1>DS Creator</h1>
 
@@ -20,5 +24,14 @@
     <input id="DSCdiscordButton" type="button" value="Join The Server!" onclick="location.href='https://discord.gg/CqrXmqxAf8';"/>
 
     <!--<br><iframe id="DSCITCH" frameborder="0" src="https://itch.io/embed/1411387?link_color=3b2fff" width="552" height="167"><a href="https://bowersindustry.itch.io/ds-creator">DS Creator by BowersIndustry</a></iframe></br>-->
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><button onclick="location.href='../index.html'" >Home</button></br>
+        <br><button onclick="location.href='./DeS.html'" >DeS</button></br>
+        <br><button onclick="location.href='./Adventures of Harry FurBall.html'" >Adventures of Harry FurBall</button></br>
+        <br><button onclick="location.href='./Fun Game!.html'" >Fun Game!</button></br>
+    </div>
+
+    <script src="../Code/NavBar.js" ></script>
 </body>
 </html>

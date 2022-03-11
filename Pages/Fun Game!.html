@@ -13,11 +13,25 @@
     <link rel="stylesheet" href="../Themes/Fun Game!.css" />
 </head>
 <body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
     <input class="HomeButton" type="image" src="../Images/BowersIndustry Logo.png" onclick="location.href='../index.html'" width="30%" height="30%" />
     <h1>Fun Game!</h1>
 
     <strong>Fun Game! has a long story.</strong>
     <p>So originally it started as just a test to see what I could build in 1 hour. And after that one hour I had a simple little game, <br>and I kind of forgot about it. Then one day I said, "Hey, let's remake this game but for the Game Boy." So that's what I did. <br>I remade Fun Game! for the Game Boy, and I had so much fun making it! After reading a few comments on the itch.io page,<br> I decided to make Fun Game! a complete game! So that's what I did!</br></p>
-    <br><iframe frameborder="0" src="https://itch.io/embed/1201432?bg_color=ffffff&amp;fg_color=222222&amp;link_color=000000&amp;border_color=cccccc" width="552" height="167"><a href="https://bowersindustry.itch.io/fun-game">Fun Game! by BowersIndustry</a></iframe></br>
+    <br><iframe class="EMBED" frameborder="0" src="https://itch.io/embed/1201432?bg_color=ffffff&amp;fg_color=222222&amp;link_color=000000&amp;border_color=cccccc" width="552" height="167"><a href="https://bowersindustry.itch.io/fun-game">Fun Game! by BowersIndustry</a></iframe></br>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><button onclick="location.href='../index.html'" >Home</button></br>
+        <br><button onclick="location.href='./DS Creator.html'" >DS Creator</button></br>
+        <br><button onclick="location.href='./DeS.html'" >DeS</button></br>
+        <br><button onclick="location.href='./Adventures of Harry FurBall.html'" >Adventures of Harry FurBall</button></br>
+    </div>
+
+    <script src="../Code/NavBar.js" ></script>
 </body>
 </html>
