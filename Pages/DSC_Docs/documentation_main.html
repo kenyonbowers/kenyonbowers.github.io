@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Creator : Main</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../Themes/DSC_Docs/documentation_main.css" />
+</head>
+<body>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+    </div>
+
+    <h1>DS Creator Documentation</h1>
+
+    <p>DS Creator is a game engine that let's <b>ANYONE</b> make DS games! It is currently still in early development. To watch DS Creator be developed join the Discord Server!</p>
+    <input id="DSCdiscordButton" type="button" value="Join The Server!" onclick="location.href='https://discord.gg/CqrXmqxAf8';"/>
+
+    <div class="Container">
+        <br><img class="IMAGE" src="../../Images/DSC Logo.png" /></br>
+    </div>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br><button onclick="location.href='./sprites_actors.html'" >Sprites/Actors</button></br>
+        <br><button onclick="location.href='./backgrounds_scenes.html'" >Backgrounds/Scenes</button></br>
+        <br><button onclick="location.href='./music_sfx.html'" >Music/Sound Effects</button></br>
+        <br><button onclick="location.href='./input.html'" >Input</button></br>
+    </div>
+
+    <script src="../../Code/NavBar.js" ></script>
+</body>
+</html>
