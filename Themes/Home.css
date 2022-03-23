@@ -95,7 +95,7 @@ p{
     position: fixed;
   }
 
-  @media screen and (max-width: 626px) {
-    #discord {left: 65%; top: 4%;}
-    #youtube {left: 85%;}
+  @media screen and (max-width: 1401px) {
+    #discord {left: 77%; top: 4%;}
+    #youtube {left: 82%; top: 25%;}
   }
