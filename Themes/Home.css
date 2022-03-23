@@ -83,3 +83,19 @@ p{
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
   }
+
+  #discord{
+    left: 82%;
+    top: 7.5%;
+    position: fixed;
+  }
+  #youtube{
+    left: 90%;
+    top: 10%;
+    position: fixed;
+  }
+
+  @media screen and (max-width: 626px) {
+    #discord {left: 65%; top: 4%;}
+    #youtube {left: 85%;}
+  }
