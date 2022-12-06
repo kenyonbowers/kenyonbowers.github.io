@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./imgs/icon.png">
 
+    <script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-zinc-400">
@@ -22,7 +24,10 @@
             <header class="text-center rounded-t-md md:bg-cover"></header>
 
             <nav class="bg-white shadow" role="navigation">
-                <div class="container mx-auto pl-4 pr-4 pb-4 md:pb-0 flex flex-wrap items-center md:flex-no-wrap">
+                <div class="border-zinc-100 w-full h-10" id="menuButtonSection">
+                  <button id="menuButton" class="p-2" style="float: right;"><i class="fa-solid fa-bars"></i></button>
+                </div>
+                <div id="menu" class="container mx-auto pl-4 pr-4 pb-4 md:pb-0 flex flex-wrap items-center md:flex-no-wrap">
                   <div class="w-full md:w-auto md:flex-grow md:flex md:items-center">
                     <ul class="flex flex-col -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0">
                       <li>
@@ -61,6 +66,25 @@
             </div>
         </div>
     </div>
+    <script>
+      var menuButton = document.querySelector("#menuButton");
+      var menu = document.querySelector("#menu");
+      var menuButtonSection = document.querySelector("#menuButtonSection");
+      if(window.innerWidth <= 640){
+        menu.style.display = "none";
+      }
+      else{
+        menuButtonSection.style.display = "none";
+      }
+      menuButton.addEventListener("click", function(){
+        if(menu.style.display == "none"){
+          menu.style.display = "";
+        }
+        else{
+          menu.style.display = "none";
+        }
+      });
+    </script>
 </body>
 </html>
 
