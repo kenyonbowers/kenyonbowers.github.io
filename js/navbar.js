@@ -1,11 +1,7 @@
 var menuButton = document.querySelector("#menuButton");
 var menu = document.querySelector("#menu");
 var menuButtonSection = document.querySelector("#menuButtonSection");
-if (window.innerWidth <= 640) {
-  menu.style.display = "none";
-} else {
-  menuButtonSection.style.display = "none";
-}
+LoadMenu();
 menuButton.addEventListener("click", function () {
   if (menu.style.display == "none") {
     menu.style.display = "";
@@ -13,3 +9,13 @@ menuButton.addEventListener("click", function () {
     menu.style.display = "none";
   }
 });
+window.addEventListener('resize', LoadMenu);
+function LoadMenu(){
+  if (window.innerWidth <= 640) {
+    menu.style.display = "none";
+    menuButtonSection.style.display = "";
+  } else {
+    menuButtonSection.style.display = "none";
+    menu.style.display = "";
+  }
+}
