@@ -11,7 +11,7 @@ menuButton.addEventListener("click", function () {
 });
 window.addEventListener('resize', LoadMenu);
 function LoadMenu(){
-  if (window.innerWidth <= 640) {
+  if (window.innerWidth <= 767) {
     menu.style.display = "none";
     menuButtonSection.style.display = "";
   } else {
