@@ -1,92 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Kenyon Bowers</title>
+		<link rel="icon" type="image/x-icon" href="./images/logo.png">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kenyon Bowers - Home</title>
+		<!-- Loading third party fonts -->
+		<link href="fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
 
-  <meta property="og:title" content="Kenyon Bowers - Home" />
-  <meta property="og:description" content="Born again, Jesus believing, Independent Fundamental Baptist." />
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="./imgs/icon.png" />
+	</head>
 
-  <script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
 
-  <script src="./js/tailwindcss.js"></script>
-  <link rel="stylesheet" href="./css/page.css" />
-</head>
+	<body>
+		<div class="site-content">
+			<header class="site-header">
+				<div class="container">
+					<a href="#" class="branding">
+						<img src="images/logo.png" alt="" class="logo">
+					</a>
 
-<body class="bg-zinc-400">
-  <div class="w-full h-full flex justify-center">
-    <div class="bg-white mt-3 mb-3 rounded-lg w-11/12 md:w-9/12">
-      <header class="text-center rounded-t-md md:bg-cover"></header>
+					<div class="main-navigation">
+						<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
+						<ul class="menu">
+							<li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
+							<li class="menu-item"><a href="./beliefs.html">Beliefs</a></li>
+							<li class="menu-item"><a href="https://youtube.com/@NoLongerBound">YouTube</a></li>
+							<li class="menu-item"><a href="https://github.com/kenyonbowers">GitHub</a></li>
+						</ul>
+					</div>
 
-      <nav class="bg-white shadow" role="navigation">
-        <div class="border-zinc-100 w-full h-10" id="menuButtonSection">
-          <button id="menuButton" class="pt-2 pb-2 pl-4 pr-4" style="float: right">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
-        <div id="menu" class="container mx-auto pl-4 pr-4 pb-4 md:pb-0 flex flex-wrap items-center md:flex-no-wrap">
-          <div class="w-full md:w-auto md:flex-grow md:flex md:items-center">
-            <ul
-              class="flex flex-col -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:mt-0 md:pt-0 md:mr-4 lg:mr-8 md:border-0">
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4" href="./index.html" title="Link">Home</a>
-              </li>
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4 text-cyan-600" href="./beliefs.html"
-                  title="Beliefs">Beliefs</a>
-              </li>
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4" href="./contact.html" title="Contact">Contact</a>
-              </li>
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4 text-cyan-600" href="./projects.html"
-                  title="Projects">Projects</a>
-              </li>
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4" href="./resources.html" title="Resources">Resources</a>
-              </li>
-            </ul>
-            <ul
-              class="flex flex-col mt-4 -mx-4 pt-4 border-t md:flex-row md:items-center md:mx-0 md:ml-auto md:mt-0 md:pt-0 md:border-0">
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4 text-cyan-600" href="https://youtube.com/@NoLongerBound"
-                  title="YouTube">YouTube</a>
-              </li>
-              <li>
-                <a class="block px-4 py-1 md:p-2 lg:px-4" href="https://www.reddit.com/r/independentbaptists"
-                  title="Subreddit">Subreddit</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+					<div class="mobile-navigation"></div>
+				</div>
+			</header> <!-- .site-header -->
 
-      <div class="pt-2 flex justify-center">
-        <p class="text-title text-2xl">Striving to Please the Master</p>
-      </div>
-      <div class="flex justify-center">
-        <p class="text-xs md:text-sm font-bold">
-          Bringing the Scripture and the Gospel to the internet.
-        </p>
-      </div>
-      <div class="pl-4 pr-4 pt-4 pb-2 md:pl-16 md:pr-16">
-        <p>
-          Hello. Welcome to this website! I am Kenyon Bowers, a Bible
-          believing, truth preaching, Independent Fundamental Baptist. This
-          ministry is designed to combat the ungodly influence of the
-          internet.
-        </p>
-      </div>
-    </div>
-  </div>
-  <script src="./js/navbar.js"></script>
-</body>
+			<div class="hero">
+				<div class="slides">
+					<li data-bg-image="images/slide-1.jpg">
+						<div class="container">
+							<div class="slide-content">
+								<h2 class="slide-title">Kenyon Bowers</h2>
+								<h2 class="slide-subtitle">2 Timothy 2:15</h2>
+								<hr>
+								<h2>Study to shew thyself approved unto God, a workman that needeth not to be ashamed, rightly dividing the word of truth.</h2>
+								<div class="text-center">
+									<a href="./beliefs.html" class="button">Beliefs</a>
+								</div>
+							</div>
+						</div>
+					</li>
+				</div>
+			</div>
+
+			<main class="main-content">
+				<div class="fullwidth-block">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6">
+								<h2 class="section-title">My Mission:</h2>
+								<p class="p">As an <b>Independent Fundamental Baptist</b> committed to the <b>King James Bible</b>, my mission is to share the Gospel of Jesus Christ with the world through online media. I seek to use the internet as a tool to reach people from all walks of life with the message of salvation, emphasizing the need for repentance of sin and placing your faith in <b>Christ alone</b>. I believe that the King James Bible is <b>the</b> inspired, inerrant, and infallible <b>Word of God</b>, and I seek to teach and defend its truths through this online ministry. My goal is to help believers grow in their faith and knowledge of God, equip them for effective ministry, and encourage them to live godly lives. I am committed to upholding the historic doctrines of the Christian faith, defending the truth against error, and promoting biblical separation from the world. Ultimately, my desire is to glorify God and see lives transformed by the power of the Gospel.</p>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- section -->
+
+				<div class="fullwidth-block">
+					<div class="container" id="videos">
+						<h2 class="section-title">Recommended Videos</h2>
+
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<div class="video">
+									<image class="video-image" src="https://i9.ytimg.com/vi_webp/vAzdbZTQOok/maxresdefault.webp?v=64224cf7&sqp=CKTfgKIG&rs=AOn4CLCzDyMT6UuR_rR-d2Js0BVx_ZXtXA"></image>
+									<h3 class="video-title"><a href="https://youtu.be/vAzdbZTQOok">Abraham's Bosom; Is it REAL?</a></h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="video">
+									<image class="video-image" src="https://i9.ytimg.com/vi/1SjJWJEGKrY/maxresdefault.jpg?v=63fe5a48&sqp=CKTfgKIG&rs=AOn4CLCiK0UyQ0ugUTxZBlqdyAwcGoACnw"></image>
+									<h3 class="video-title"><a href="https://youtu.be/1SjJWJEGKrY">The IMPORTANCE of the BIBLE</a></h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="video">
+									<image class="video-image" src="https://i9.ytimg.com/vi_webp/vG3pdXt2sHg/maxresdefault.webp?v=63c9f19e&sqp=CNDhgKIG&rs=AOn4CLCsWoA2MszSchetMGuPYlWS6dVTQw"></image>
+									<h3 class="video-title"><a href="https://youtu.be/vG3pdXt2sHg">My First Time Preaching (2018)</a></h3>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<div class="video">
+									<image class="video-image" src="https://i9.ytimg.com/vi/7rUT5mbD0gg/maxresdefault.jpg?v=634ec4bd&sqp=CNDhgKIG&rs=AOn4CLDd-hVLtHjEauFCxpRgRqhim3_Cag"></image>
+									<h3 class="video-title"><a href="https://youtu.be/7rUT5mbD0gg">The Problem With Modern Christians</a></h3>
+								</div>
+							</div>
+						</div> <!-- .row -->
+					</div> <!-- .container -->
+				</div> <!-- section -->
+			</main> <!-- .main-content -->
+
+			<footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">About:</h3>
+								<p>I am Kenyon Bowers, I am an Independent Fundamental Baptist. I am a software developer as well as a preacher of God's Word.</p>
+								<hr>
+								<p>Mark 16:15 - And he said unto them, Go ye into all the world, and preach the gospel to every creature.</p>
+								<ul class="address">
+									<p><i class="fa fa-envelope"></i> itskenyon@crosscrusaders.com</p>
+									<p><i class="fa-brands fa-discord"></i> Bro. Kenyon#1492</p>
+								</ul>
+							</div>
+						</div>
+						<!--<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Topics from last meeting</h3>
+								<ul class="bullet">
+									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+									<li><a href="#">Consectetur adipisicing elit quis nostrud</a></li>
+									<li><a href="#">Eiusmod tempor incididunt ut labore et dolore magna</a></li> 
+									<li><a href="#">Ut enim ad minim veniam cillum</a></li>
+									<li><a href="#">Exercitation ullamco laboris nisi ut aliquip</a></li> 
+									<li><a href="#">Duis aute irure dolor in reprehenderit in voluptate</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="widget">
+								<h3 class="widget-title">Contact form</h3>
+								<form action="#" class="contact-form">
+									<div class="row">
+										<div class="col-md-6"><input type="text" placeholder="Your name..."></div>
+										<div class="col-md-6"><input type="text" placeholder="Email..."></div>
+									</div>
+									
+									<textarea name="" placeholder="Your message..."></textarea>
+									<div class="text-right"><input type="submit" value="Send message"></div>
+									
+								</form>
+							</div>
+						</div>-->
+					</div> <!-- .row -->
+
+					<p class="colophon">Copyright 2023 Kenyon Bowers. All right reserved</p>
+				</div><!-- .container -->
+			</footer> <!-- .site-footer -->
+
+		</div>
+		
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
 </html>
