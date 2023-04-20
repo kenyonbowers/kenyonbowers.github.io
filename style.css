@@ -1916,34 +1916,34 @@ form .hero .slides input[type="reset"]:after {
   margin: 0 0 10px;
 }
 
-.belief-list {
+.belief-resource-list {
   list-style: none;
   margin-bottom: 30px;
 }
 
-.belief-list li {
+.belief-resource-list li {
   padding: 10px 50% 10px 0;
   padding-right: 50%;
   position: relative;
   border-bottom: 1px solid #e5e5e5;
 }
 
-.belief-list li:first-child {
+.belief-resource-list li:first-child {
   border-top: 1px solid #e5e5e5;
 }
 
-.belief-list .belief-title {
+.belief-resource-list .belief-resource-title {
   display: inline-block;
   margin-bottom: 0;
   font-size: 20px;
   font-size: 1.5em;
 }
 
-.belief-list.large li {
+.belief-resource-list.large li {
   padding: 20px 0;
 }
 
-.belief-list.large .belief-title {
+.belief-resource-list.large .belief-resource-title {
   display: block;
   margin-bottom: 10px;
 }
