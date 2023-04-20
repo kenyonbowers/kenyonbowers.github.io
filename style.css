@@ -341,10 +341,10 @@ form input[type="submit"],
 form button,
 form input[type="reset"] {
   display: inline-block;
-  background: #e2caae;
-  background: -webkit-linear-gradient(#e2caae, #c39f70);
-  background: linear-gradient(#e2caae, #c39f70);
-  border-bottom: 1px solid #a68861;
+  background: #afaee2;
+  background: -webkit-linear-gradient(#b3aee2, #7c70c3);
+  background: linear-gradient(#b3aee2, #7c70c3);
+  border-bottom: 1px solid #afaee2;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px 25px;
