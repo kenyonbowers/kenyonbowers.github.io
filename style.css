@@ -2116,3 +2116,13 @@ ul.bullet li a:hover {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.verse {
+  color: lightskyblue;
+}
+.redletters{
+  color: red;
+}
+.link {
+  color: rgb(82, 82, 228);
+}
