@@ -1921,7 +1921,7 @@ form .hero .slides input[type="reset"]:after {
   margin-bottom: 30px;
 }
 
-.belief-resource-list li {
+.belief-resource-list li.bottom {
   padding: 10px 50% 10px 0;
   padding-right: 50%;
   position: relative;
@@ -2125,4 +2125,9 @@ ul.bullet li a:hover {
 }
 .link {
   color: rgb(82, 82, 228);
+}
+
+.ml-15 {
+  margin-left: 15px;
+  margin-bottom: -3px;
 }
