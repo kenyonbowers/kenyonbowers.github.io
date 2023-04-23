@@ -14,6 +14,8 @@
 			directionNav: false,
 			controlNav: true
 		});
+
+		$("#footer").load("../modules/footer.html");
 	});
 
 	$(window).load(function(){
