@@ -1907,13 +1907,17 @@ form .hero .slides input[type="reset"]:after {
   width: 100%;
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .video .video-title {
-  font-size: 14px;
-  font-size: 1em;
-  margin: 0 0 10px;
+  height: 1%;
+  margin: 10px;
+  padding-bottom: 5px;
 }
 
 .belief-resource-list {
