@@ -1,10 +1,11 @@
-On joining a server, the bot collects:
-- the server id
-- the channel from which the bot can freely send messages (for changelogs)
-
-When using the /allowversions or /setchangelogchannel commands, the bot will collect either:
-- whether more than just the 1762 King James Bible is allowed
-or
-- the id of the new changelog channel
-
-On removal from server, the bot will delete all data collected on said server.
+1) What data do we collect?
+	a) We collect the server ID, and a single channel ID in each server the bot is in.
+	b) We also allow for the ability for administrators of a server to change the channel ID that we store as well as if they want the ability to send Bible verses from only the 1762 King James Bible or not.
+2) How do you use the data?
+	a) We need the data to insure that servers only have access to the King James Bible and/or which channel they would like to recieve changelogs in.
+3) Who do we share collected data with?
+	a) We do not share collected data with anyone. Only the owner and bot have access to stored data.
+4) How can users contact us with concerns?
+	a) Users can contact us through this email: itskenyon@crosscrusaders.com, or through Discord at @kenyonbowers.
+5) If you store data, how can users have that data removed?
+	a) Once the bot is removed from a server, it will delete all data associated to that server.
