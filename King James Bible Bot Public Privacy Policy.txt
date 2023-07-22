@@ -1,0 +1,10 @@
+On joining a server, the bot collects:
+- the server id
+- the channel from which the bot can freely send messages (for changelogs)
+
+When using the /allowversions or /setchangelogchannel commands, the bot will collect either:
+- whether more than just the 1762 King James Bible is allowed
+or
+- the id of the new changelog channel
+
+On removal from server, the bot will delete all data collected on said server.
