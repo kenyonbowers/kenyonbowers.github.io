@@ -1903,6 +1903,10 @@ form .hero .slides input[type="reset"]:after {
   margin-bottom: 30px;
 }
 
+.indent {
+  padding-left: 20px;
+}
+
 .video .video-image {
   width: 100%;
   max-width: 100%;
