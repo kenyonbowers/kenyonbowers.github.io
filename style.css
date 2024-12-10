@@ -383,10 +383,48 @@ form input.secondary[type="reset"] {
   height: 0;
 }
 
+#about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  max-width: 100%;
+  margin-top: 2rem;
+}
+#about-image {
+  margin-bottom: 10px;
+  border-radius: 20%;
+  max-width: 50%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+#about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
   }
+
+  #about-container {
+    flex-direction: row;
+      text-align: left;
+      justify-content: center;
+      gap: 30px;
+    }
+    #about-image {
+      object-fit: cover;
+      height: 60vh;
+    }
+    #about-text {
+      justify-content: center;
+      width: 40rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -2133,10 +2171,9 @@ ul.bullet li a:hover {
 }
 
 .center {
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
 }
 
 .verse {
