@@ -1417,6 +1417,13 @@ form input.secondary[type="reset"] {
   td.visible-xs {
     display: table-cell !important;
   }
+  .youtube {
+    height: 15rem;
+    width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1884,6 +1891,13 @@ form .hero .slides input[type="reset"]:after {
     font-size: 48px;
     font-size: 3.4285714286em;
   }
+  .youtube {
+    height: 13.5rem;
+    width: 24rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
 }
 
 .fullwidth-block {
@@ -2133,4 +2147,7 @@ ul.bullet li a:hover {
 }
 .link {
   color: rgb(82, 82, 228);
+}
+.link:hover {
+  color: rgb(61, 61, 241);
 }
