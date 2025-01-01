@@ -2,174 +2,171 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenyon Bowers: Home</title>
 
-	<title>Kenyon Bowers: Home</title>
-	<link rel="icon" type="image/x-icon" href="./images/logo.png">
-	<meta name="description" content="An online Independent Fundamental Baptist ministry.">
-	<meta name="keywords"
-		content="Christian, Jesus, Christ, Jesus Christ, ministry, online ministry, IFB, Baptist, Independent Fundamental Baptist, Independent Baptist, Bible, King Jame Bible, King James Version, KJB, KJV, KJB 1611, KJV 1611, doctrine, kenyon, kenyon bowers, bowers, Kenyon, Kenyon Bowers, Bowers">
-	<meta name="author" content="Kenyon Bowers">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/media/logo.png">
 
-	<meta name="google-site-verification" content="qfNkC7vEzlxV8MbUpj57dLjMmQySQQecfHUif9r5W-o" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-	<!-- Loading third party fonts -->
-	<link href="fonts/novecento-font/novecento-font.css" rel="stylesheet" type="text/css">
-	<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
-
-	<!-- Loading main css file -->
-	<link rel="stylesheet" href="style.css">
-
-	<!--[if lt IE 9]>
-		<script src="js/ie-support/html5.js"></script>
-		<script src="js/ie-support/respond.js"></script>
-		<![endif]-->
-
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/8dd3442808.js" crossorigin="anonymous"></script>
 </head>
 
+<body class="bg-gray-100">
+    <!-- Header -->
+    <header class="py-4">
+        <div class="container mx-auto px-4">
+            <!-- Image above the Navigation Bar -->
+            <a href="#" class="flex justify-center my-4">
+                <img src="./images/media/logo.png" alt="Header Image" class="rounded-2xl h-28 object-contain">
+            </a>
 
-<body>
-	<div class="site-content">
-		<header class="site-header">
-			<div class="container">
-				<a href="#" class="branding">
-					<img src="images/logo.png" alt="" class="logo">
-				</a>
+            <!-- Navigation Bar -->
+            <nav class="grid">
+                <button id="menu-toggle" class="p-5 uppercase md:hidden">☰ Menu</button>
+                <ul id="menu"
+                    class="overflow-hidden md:max-h-fit max-h-0 list-none grid md:grid-cols-5 grid-cols-1 md:mx-auto text-center mx-20 transition-all ease-in-out duration-300 text-[#89837c]">
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] md:border-[#8f7655]"
+                            href=" #">Home</a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
+                            href="./beliefs">Beliefs</a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
+                            href="https://kenyonbowers.blogspot.com/" target="_blank">Resources</a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease-in-out duration-300 hover:border-[#8f7655]"
+                            href="https://www.youtube.com/@KenyonBowers/" target="_blank">YouTube</a>
+                    </li>
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
+                            href="https://kenyonbowers.blogspot.com/2025/01/why-kjv.html" target="_blank">Why
+                            KJV?</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-				<div class="main-navigation">
-					<button class="menu-toggle"><i class="fa fa-bars"></i> Menu</button>
-					<ul class="menu">
-						<li class="menu-item current-menu-item"><a href="#">Home</a></li>
-						<li class="menu-item"><a href="./beliefs">Beliefs</a></li>
-						<li class="menu-item"><a href="https://kenyonbowers.blogspot.com/" target="_blank">Resources</a>
-						</li>
-						<li class="menu-item"><a href="https://www.youtube.com/@KenyonBowers/"
-								target="_blank">YouTube</a></li>
-						<li class="menu-item"><a href="https://kenyonbowers.blogspot.com/" target="_blank">Why KJV?</a>
-						</li>
-					</ul>
-				</div>
+    <!-- Image Banner with Text -->
+    <div class="relative">
+        <img src="./images/media/banner.jpg" alt="Banner Image" class="w-full h-[32rem] object-cover">
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center">
+            <h1 class="lg:text-7xl text-6xl font-bold mb-12">Kenyon Bowers</h1>
+            <h2 class="lg:text-4xl text-3xl font-semibold mb-2 uppercase">2 Timothy 2:15</h2>
+            <hr class="w-96 h-0.5 mx-auto bg-[#777] border-0 rounded mb-2">
+            <p class="text-2xl xl:mx-96 lg:mx-68 md:mx-20 mx-10 uppercase mb-4">Study to shew thyself
+                approved unto God, a
+                workman
+                that
+                needeth
+                not to be
+                ashamed,
+                rightly
+                dividing
+                the
+                word of truth.</p>
+            <a href="./salvation"
+                class="uppercase drop-shadow-2xl border-2 border-[#b3aee2] text-white bg-[#7c70c3] hover:bg-[#b3aee2] focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 transition-all duration-200">How
+                to be saved</a>
+        </div>
+    </div>
 
-				<div class="mobile-navigation"></div>
-			</div>
-		</header> <!-- .site-header -->
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4 text-[#89837c]">
+        <hr>
+        <br>
 
-		<div class="hero">
-			<div class="slides">
-				<li data-bg-image="images/slide-1.jpg">
-					<div class="container">
-						<div class="slide-content">
-							<h2 class="slide-title">Kenyon Bowers</h1>
-								<h2 class="slide-subtitle">2 Timothy 2:15</h2>
-								<hr>
-								<h2>Study to shew thyself approved unto God, a workman that needeth not to be ashamed,
-									rightly dividing the word of truth.</h2>
-								<div class="text-center">
-									<a href="./salvation" class="button">How to be saved</a>
-								</div>
-						</div>
-					</div>
-				</li>
-			</div>
-		</div>
+        <!-- About -->
+        <section class="mb-8 flex md:flex-row flex-col text-left justify-center gap-8">
+            <img src="./images/home/about.png"
+                class="lg:w-80 md:w-52 w-80 lg:h-96 md:h-96 h-72 object-cover mt-auto mb-auto rounded-2xl drop-shadow-2xl md:ml-0 md:mr-0 ml-auto mr-auto border-2 border-gray-400" />
+            <div>
+                <h2 class="text-3xl font-semibold mb-4 uppercase text-[#544531]">About Kenyon</h2>
+                <p class="text-md lg:w-96 w-90">I, Kenyon, am an Independent Fundamentalist Baptist
+                    (IFB). I am
+                    committed to
+                    defending
+                    the King James Bible and the Traditional Texts of both the Old and New Testaments (Masoretic Text &
+                    Textus Receptus). My mission and goal is to share the Gospel of Jesus Christ with the world through
+                    online media. Likewise, I seek to teach and defend Bible truths through my online presence. My
+                    desire is
+                    to help believers grow in their faith and knowledge of God, equip them for effective ministry, and
+                    encourage them to live godly lives. I am committed to upholding the doctrines of the Christian
+                    faith,
+                    defending the truth against error, and promoting biblical separation from the world. Ultimately, my
+                    desire is to glorify God and see lives transformed by the power of the Gospel.</p>
+            </div>
+        </section>
 
-		<main class="main-content">
-			<div class="fullwidth-block">
-				<div class="container">
-					<div class="row">
-						<div class="center">
-							<div id="about-container">
-								<img src="./images/main/about.png" id="about-image" alt="Kenyon Bowers Image" />
-								<div id="about-text">
-									<h2 class="section-title">About Kenyon</h2>
-									<p class="p">I, Kenyon, am an Independent Fundamentalist Baptist (IFB). I am
-										committed to defending the King James Bible and the Traditional Texts of both
-										the Old and New Testaments (Masoretic Text & Textus Receptus). My mission and
-										goal is to share the Gospel of Jesus Christ with the world through online media.
-										Likewise, I seek to teach and defend Bible truths through my online presence.
-										My desire is to help believers grow in their faith and knowledge of God, equip
-										them for effective ministry, and encourage them to live godly lives. I am
-										committed to upholding the doctrines of the Christian faith, defending
-										the truth against error, and promoting biblical separation from the world.
-										Ultimately, my desire is to glorify God and see lives transformed by the power
-										of the Gospel.</p>
-								</div>
-							</div>
-						</div>
-					</div> <!-- .row -->
-				</div> <!-- .container -->
-			</div> <!-- section -->
+        <!--
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-semibold mb-2">Item 1</h3>
+                <p class="text-gray-700">Description goes here.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-semibold mb-2">Item 2</h3>
+                <p class="text-gray-700">Description goes here.</p>
+            </div>
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-semibold mb-2">Item 3</h3>
+                <p class="text-gray-700">Description goes here.</p>
+            </div>
+        </section>
+        -->
 
-			<!--<div class="fullwidth-block">
-					<div class="container" id="videos">
-						<h2 class="section-title">Recommended Videos</h2>
-						<div class="row">
-							<div class="col-md-3 col-sm-6">
-								<a class="video" target="_blank" href="https://youtu.be/QUhmQEMlXW0">
-									<image class="video-image" src="./images/YT_Thumbnails/Thumbnail-1.png"></image>
-									<h3 class="video-title">What does the Bible say about Alcohol?</h3>
-								</a>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<a class="video" target="_blank" href="https://youtu.be/1SjJWJEGKrY">
-									<image class="video-image" src="./images/YT_Thumbnails/Thumbnail-2.png"></image>
-									<h3 class="video-title">The IMPORTANCE of the BIBLE</h3>
-								</a>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<a class="video" target="_blank" href="https://youtu.be/M2MTjwiawLI">
-									<image class="video-image" src="./images/YT_Thumbnails/Thumbnail-3.png"></image>
-									<h3 class="video-title">The "Contradiction" in Joseph's Geneaology</h3>
-								</a>
-							</div>
-							<div class="col-md-3 col-sm-6">
-								<a class="video" target="_blank" href="https://youtu.be/7rUT5mbD0gg">
-									<image class="video-image" src="./images/YT_Thumbnails/Thumbnail-4.png"></image>
-									<h3 class="video-title">The Problem With Modern Christians</h3>
-								</a>
-							</div>
-						</div> !-- .row ->
-					</div> !-- .container ->
-				</div> !-- section -->
+        <hr>
+        <br>
 
-			<div class="fullwidth-block">
-				<div class="container" id="videos">
-					<h2 class="section-title">Recommended Videos</h2>
-					<div class="row">
-						<div class="col-md-3 col-sm-6 youtube">
-							<iframe type="text/html" frameborder="0" width="100%" height="100%"
-								src="https://www.youtube.com/embed/8oz1FjN4nKk" allowfullscreen></iframe>
-						</div>
-						<div class="col-md-3 col-sm-6 youtube">
-							<iframe type="text/html" frameborder="0" width="100%" height="100%"
-								src="https://www.youtube.com/embed/DV7tBN7HDi4" allowfullscreen></iframe>
-						</div>
-						<div class="col-md-3 col-sm-6 youtube">
-							<iframe type="text/html" frameborder="0" width="100%" height="100%"
-								src="https://www.youtube.com/embed/f-A7TlE8vTQ" allowfullscreen></iframe>
-						</div>
-						<div class="col-md-3 col-sm-6 youtube">
-							<iframe type="text/html" frameborder="0" width="100%" height="100%"
-								src="https://www.youtube.com/embed/sGfweEA3sVg" allowfullscreen></iframe>
-						</div>
+        <!-- Videos -->
+        <section class="grid grid-cols-1 gap-4">
+            <h2 class="text-3xl font-semibold mb-4 uppercase text-[#544531]">Recommended Videos</h2>
+            <div class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+                <iframe type="text/html" frameborder="0" src="https://www.youtube.com/embed/8oz1FjN4nKk" allowfullscreen
+                    class="shadow-md rounded-lg w-full xl:h-52 lg:h-48 md:h-52 sm:h-80 h-64"></iframe>
+                <iframe type="text/html" frameborder="0" src="https://www.youtube.com/embed/DV7tBN7HDi4" allowfullscreen
+                    class="shadow-md rounded-lg w-full xl:h-52 lg:h-48 md:h-52 sm:h-80 h-64"></iframe>
+                <iframe type="text/html" frameborder="0" src="https://www.youtube.com/embed/f-A7TlE8vTQ" allowfullscreen
+                    class="shadow-md rounded-lg w-full xl:h-52 lg:h-48 md:h-52 sm:h-80 h-64"></iframe>
+                <iframe type="text/html" frameborder="0" src="https://www.youtube.com/embed/sGfweEA3sVg" allowfullscreen
+                    class="shadow-md rounded-lg w-full xl:h-52 lg:h-48 md:h-52 sm:h-80 h-64"></iframe>
+            </div>
+        </section>
+    </main>
 
-					</div> <!-- .row -->
-				</div> <!-- .container -->
-			</div>
-		</main> <!-- .main-content -->
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content will be included here -->
+        <script src="./js/footer.js"></script>
+    </footer>
 
-		<div id="footer"></div>
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('menu');
 
-	</div>
-
-
-	<script src="js/jquery-1.11.1.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/app.js"></script>
-
+        menuToggle.addEventListener('click', () => {
+            if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
+                menu.style.maxHeight = '0';
+            } else {
+                menu.style.maxHeight = menu.scrollHeight + 'px';
+            }
+        });
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                menu.style.maxHeight = ''; // Reset to default behavior
+            }
+        });
+    </script>
 </body>
 
 </html>
