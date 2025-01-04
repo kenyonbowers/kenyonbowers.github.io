@@ -13,6 +13,6 @@ document.write(`
                 <p><i class="fa-brands fa-discord"></i> @kenyonbowers</p>
             </div>
         </div>
-        <p class="mt-4">Copyright &copy; 2025 Kenyon Bowers. All rights reserved.</p>
+        <p class="mt-4">Copyright &copy; 2022-${new Date().getFullYear()} Kenyon Bowers. All rights reserved.</p>
     </div>
 `);
