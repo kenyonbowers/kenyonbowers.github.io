@@ -28,23 +28,19 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Overlay -->
-    <div id="overlay"></div>
-
     <!-- Header -->
     <header class="py-4">
         <div class="container mx-auto px-4">
             <!-- Image above the Navigation Bar -->
             <a href="../" class="flex justify-center my-4">
-                <img src="../images/media/logo.png" alt="Kenyon Bowers logo, Bible"
-                    class="rounded-2xl h-28 object-contain">
+                <img src="../images/media/logo.png" alt="Header Image" class="rounded-2xl h-28 object-contain">
             </a>
 
             <!-- Navigation Bar -->
-            <nav class="relative">
+            <nav class="grid">
                 <button id="menu-toggle" class="p-5 uppercase md:hidden">☰ Menu</button>
                 <ul id="menu"
-                    class="hidden md:flex md:grid-cols-5 grid-cols-1 text-center mx-20 transition-all ease-in-out duration-300 text-[#89837c]">
+                    class="overflow-hidden md:max-h-fit max-h-0 list-none grid md:grid-cols-5 grid-cols-1 md:mx-auto text-center mx-20 transition-all ease-in-out duration-300 text-[#89837c]">
                     <li class="inline-block">
                         <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
                             href="../">Home</a>
@@ -53,29 +49,13 @@
                         <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] md:border-[#8f7655]"
                             href="#">Beliefs</a>
                     </li>
-                    <li class="inline-block relative">
-                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655] cursor-pointer"
-                            id="resources-toggle">
-                            Resources <i class="fa-solid fa-chevron-down w-4"></i>
-                        </a>
-                        <!-- Modal Dropdown for PC -->
-                        <div id="resources-modal"
-                            class="absolute left-0 top-full bg-white border border-gray-300 rounded-lg shadow-lg w-64 z-10">
-                            <ul class="list-none p-4">
-                                <li>
-                                    <a href="https://kenyonbowers.blogspot.com" target="_blank"
-                                        class="block py-2 hover:bg-gray-100">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="https://holyanimewars.blogspot.com" target="_blank"
-                                        class="block py-2 hover:bg-gray-100">The Holy Anime Wars</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <li class="inline-block">
+                        <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
+                            href="https://kenyonbowers.blogspot.com/" target="_blank">Resources</a>
                     </li>
                     <li class="inline-block">
                         <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease-in-out duration-300 hover:border-[#8f7655]"
-                            href="https://www.youtube.com/@KenyonBowers" target="_blank">YouTube</a>
+                            href="https://www.youtube.com/@KenyonBowers/" target="_blank">YouTube</a>
                     </li>
                     <li class="inline-block">
                         <a class="block mx-2 my-3 uppercase text-lg md:border-b-2 border-b-[1px] ease duration-300 hover:border-[#8f7655]"
@@ -83,42 +63,6 @@
                             KJV?</a>
                     </li>
                 </ul>
-
-                <!-- Mobile Sidebar Menu -->
-                <div id="mobile-menu">
-                    <ul class="list-none text-[#89837c] p-4">
-                        <li class="mb-4">
-                            <a href="../"
-                                class="uppercase text-lg block my-2 border-b-[1px] ease duration-300 hover:border-[#8f7655] cursor-pointer">Home</a>
-                        </li>
-                        <li class="mb-4">
-                            <a href="#" class="uppercase text-lg block my-2 border-b-[1px] border-[#8f7655]">Beliefs</a>
-                        </li>
-                        <li>
-                            <a href="#"
-                                class="uppercase text-lg block my-2 border-b-[1px] ease duration-300 hover:border-[#8f7655] cursor-pointer"
-                                id="mobile-resources-toggle">Resources <i class="fa-solid fa-chevron-down w-4"></i></a>
-                            <ul id="mobile-resources" class="list-none pl-4">
-                                <li>
-                                    <a href="https://kenyonbowers.blogspot.com" target="_blank" class="block">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="https://holyanimewars.blogspot.com" target="_blank" class="block py-2">The
-                                        Holy Anime Wars</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="mb-4">
-                            <a href="https://www.youtube.com/@KenyonBowers" target="_blank"
-                                class="uppercase text-lg block my-2 border-b-[1px] ease duration-300 hover:border-[#8f7655] cursor-pointer">YouTube</a>
-                        </li>
-                        <li>
-                            <a href="https://kenyonbowers.blogspot.com/2025/01/why-kjv.html" target="_blank"
-                                class="uppercase text-lg block my-2 border-b-[1px] ease duration-300 hover:border-[#8f7655] cursor-pointer">Why
-                                KJV?</a>
-                        </li>
-                    </ul>
-                </div>
             </nav>
         </div>
     </header>
@@ -291,133 +235,21 @@
     <script>
         // Mobile menu toggle
         const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const overlay = document.getElementById('overlay');
-        const mobileResourcesToggle = document.getElementById('mobile-resources-toggle');
-        const mobileResources = document.getElementById('mobile-resources');
+        const menu = document.getElementById('menu');
 
         menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            mobileMenu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-
-        mobileResourcesToggle.addEventListener('click', () => {
-            mobileResources.classList.toggle('expanded');
-        });
-
-        window.addEventListener('resize', () => {
-            if (window.innerWidth >= 768) {
-                mobileMenu.classList.remove('active');
-                overlay.classList.remove('active');
+            if (menu.style.maxHeight && menu.style.maxHeight !== '0px') {
+                menu.style.maxHeight = '0';
+            } else {
+                menu.style.maxHeight = menu.scrollHeight + 'px';
             }
         });
-
-        // Resources dropdown hover behavior
-        const resourcesToggle = document.getElementById('resources-toggle');
-        const resourcesModal = document.getElementById('resources-modal');
-
-        resourcesToggle.addEventListener('mouseenter', () => {
-            resourcesModal.style.display = 'block';
-        });
-
-        resourcesModal.addEventListener('mouseenter', () => {
-            resourcesModal.style.display = 'block';
-        });
-
-        resourcesToggle.addEventListener('mouseleave', () => {
-            setTimeout(() => {
-                if (!resourcesModal.matches(':hover')) {
-                    resourcesModal.style.display = 'none';
-                }
-            }, 100);
-        });
-
-        resourcesModal.addEventListener('mouseleave', () => {
-            resourcesModal.style.display = 'none';
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 768) {
+                menu.style.maxHeight = ''; // Reset to default behavior
+            }
         });
     </script>
 </body>
-
-<style>
-    /* Sidebar styles */
-    #mobile-menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        height: 100%;
-        width: 75%;
-        max-width: 300px;
-        background-color: #fff;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        transition: left 0.3s ease;
-        z-index: 50;
-        overflow-y: auto;
-    }
-
-    #mobile-menu.active {
-        left: 0;
-    }
-
-    #overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 40;
-    }
-
-    #overlay.active {
-        display: block;
-    }
-
-    /* Center nav items on PC */
-    #menu {
-        justify-content: center;
-    }
-
-    /* Resources dropdown for PC */
-    #resources-modal {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: white;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    #resources-toggle:hover+#resources-modal,
-    #resources-modal:hover {
-        display: block;
-    }
-
-    /* Smooth transition for mobile submenu */
-    #mobile-resources {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    #mobile-resources.expanded {
-        max-height: 100px;
-    }
-
-    /* Align icon to the right */
-    #resources-toggle i {
-        margin-left: 8px;
-    }
-</style>
 
 </html>
