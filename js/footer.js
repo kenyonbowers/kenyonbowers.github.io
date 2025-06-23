@@ -1,3 +1,14 @@
+const today = new Date();
+
+const hebrewDate = new Intl.DateTimeFormat('en-u-ca-hebrew', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+}).formatToParts(today);
+
+const hebrewYearPart = hebrewDate.find(part => part.type === 'year');
+const hebrewYear = hebrewYearPart ? parseInt(hebrewYearPart.value, 10) : null;
+
 document.write(`
     <div class="bg-[#363641] py-4 text-[#acacb1] xl:pl-80 lg:pl-52 px-8 py-10">
         <div class="flex md:flex-row flex-col gap-5">
@@ -13,6 +24,6 @@ document.write(`
                 <p><i class="fa-brands fa-discord"></i> @kenyonbowers</p>
             </div>
         </div>
-        <p class="mt-4">Copyright &copy; 2022-${new Date().getFullYear()} Kenyon Bowers. All rights reserved.</p>
+        <p class="mt-4">Copyright &copy; 5783-${hebrewYear} Kenyon Bowers. All rights reserved.</p>
     </div>
 `);
