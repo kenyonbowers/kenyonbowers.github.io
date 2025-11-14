@@ -3,7 +3,8 @@ import Layout from "../layouts/Layout.astro";
 import InnerLayout from "../layouts/InnerLayout.astro";
 import Divider from "../components/Divider.astro";
 
-import photo from "../assets/welcome.jpg";
+import japan_image from "../assets/japan_map.jpg";
+import welcome_image from "../assets/welcome.jpg";
 
 import { SITE_TITLE, SITE_SUBTITLE, focuses, projects } from "../consts";
 ---
@@ -42,7 +43,7 @@ import { SITE_TITLE, SITE_SUBTITLE, focuses, projects } from "../consts";
 
           <div class="w-full md:w-1/2">
             <img
-              src={photo.src}
+              src={welcome_image.src}
               alt="#"
               class="w-full h-48 md:h-56 lg:h-64 object-cover rounded-md shadow-md"
             />
@@ -164,7 +165,7 @@ import { SITE_TITLE, SITE_SUBTITLE, focuses, projects } from "../consts";
   <style>
     #top-background {
       background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("../assets/japan_map.jpg");
+        url(japan_image.src);
       background-size: cover;
       background-position: center;
     }
