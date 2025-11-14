@@ -14,14 +14,19 @@ import HeaderLink from "./HeaderLink.astro";
     title="Resources"
     options={[
       {
-        href: "/blog",
-        label: "Blog (W.I.P.)",
-        target: "_self",
+        href: YOUTUBE_URL,
+        label: "YouTube",
+        target: "_target",
       },
       {
         href: "https://holyanimewars.blogspot.com/",
         label: "The Holy Anime Wars",
         target: "_blank",
+      },
+      {
+        href: "/blog",
+        label: "Blog (W.I.P.)",
+        target: "_self",
       },
       {
         href: "/tetragrammaton",
@@ -30,6 +35,5 @@ import HeaderLink from "./HeaderLink.astro";
       },
     ]}
   />
-  <HeaderLink href={YOUTUBE_URL}>YouTube</HeaderLink>
   <HeaderLink href="/salvation">Salvation</HeaderLink>
 </div>
