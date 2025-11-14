@@ -11,7 +11,14 @@ import { SITE_TITLE, SITE_SUBTITLE, focuses, projects } from "../consts";
 
 <Layout title="Home" excludeInnerLayout={true}>
   <div id="top-hero" class="fixed top-0 left-0 w-full h-145 lg:h-190 -z-1">
-    <div id="top-background" class="w-full h-full"></div>
+    <div
+      style={"background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), " +
+        "url(" +
+        japan_image.src +
+        "); background-size: cover; background-position: center"}
+      class="w-full h-full"
+    >
+    </div>
     <div
       id="hero-text"
       class="z-2 text-white absolute w-full flex flex-col items-center justify-center px-4 md:px-0 drop-shadow-md md:w-3/4 lg:w-1/2 text-center"
@@ -163,13 +170,6 @@ import { SITE_TITLE, SITE_SUBTITLE, focuses, projects } from "../consts";
   </InnerLayout>
 
   <style>
-    #top-background {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url(japan_image.src);
-      background-size: cover;
-      background-position: center;
-    }
-
     .timeline {
       position: relative;
       max-width: 900px;
