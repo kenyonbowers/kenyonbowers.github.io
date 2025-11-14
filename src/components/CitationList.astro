@@ -1,0 +1,62 @@
+---
+interface Citation {
+  author?: {
+    first?: string;
+    middle?: string;
+    last?: string;
+    suffix?: string;
+  } | null;
+  title?: string;
+  container: string;
+  creationDate?: string | null;
+  url: string;
+  accessDate: string;
+}
+
+const props = Astro.props;
+const citations: Citation[] = props.citations ?? [];
+
+function formatCitation({
+  author = null,
+  title,
+  container,
+  creationDate = "",
+  url,
+  accessDate,
+}: Citation): string {
+  const italic = (text: string) => `<em>${text}</em>`;
+
+  const ensurePunct = (s: string) =>
+    /[.!?]$/.test(s[s.length - 1]) ? s : s + ".";
+
+  const a = author
+    ? author.last
+      ? `${author.last}, ${[author.first, author.middle && ensurePunct(author.middle[0]), author.suffix && ensurePunct(author.suffix)].filter(Boolean).join(" ")} `
+      : `${[author.first, author.middle && ensurePunct(author.middle[0]), author.suffix && ensurePunct(author.suffix)].filter(Boolean).join(" ")} `
+    : "";
+
+  const t = title ? `"${ensurePunct(`${title}`)}" ` : "";
+
+  return `${a}${t}${italic(container)}, ${creationDate ? creationDate + ", " : ""}https://${url}. Accessed ${accessDate}.`;
+}
+---
+
+<style>
+  .source-anchor:target {
+    background-color: var(--color-card);
+    outline: none;
+    scroll-margin-block: 50vh;
+  }
+</style>
+
+<br />
+<b>Sources:</b>
+{
+  citations.map((citation, index) => (
+    <div
+      id={`source-${index + 1}`}
+      class="source-anchor px-2 rounded-md"
+      set:html={`${index + 1}. ${formatCitation(citation)}`}
+    />
+  ))
+}

@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+const { href = "", class: className, nonLink = false, ...props } = Astro.props;
+
+const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+const subpath = pathname.match(/[^\/]+/g);
+const isActive =
+  href != null &&
+  typeof href === "string" &&
+  (href === pathname || href === "/" + (subpath?.[0] || ""));
+
+const isExternal =
+  href?.toString().startsWith("http://") ||
+  href?.toString().startsWith("https://");
+const target = isExternal ? "_blank" : undefined;
+const rel = isExternal ? "noopener noreferrer" : undefined;
+
+const defaultClasses = "text-white hover:text-slate-300 my-3 text-xl pb-1";
+---
+
+{
+  nonLink ? (
+    <span
+      class:list={[className, { active: isActive }]}
+      {...props}
+      class={defaultClasses}
+    >
+      <slot />
+    </span>
+  ) : (
+    <a
+      href={href}
+      class:list={[className, { active: isActive }]}
+      target={target}
+      rel={rel}
+      {...props}
+      class={defaultClasses}
+    >
+      <slot />
+    </a>
+  )
+}
+
+<style>
+  a,
+  span {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+  }
+  *.active {
+    font-weight: bolder;
+    border-bottom-color: var(--color-accent-2);
+  }
+</style>

@@ -1,0 +1,163 @@
+---
+import Header from "../components/Header.astro";
+import MiniHeader from "../components/MiniHeader.astro";
+import Footer from "../components/Footer.astro";
+import InnerLayout from "./InnerLayout.astro";
+
+import "../styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+
+interface Props {
+  title: string;
+  description?: string;
+  excludeInnerLayout?: boolean;
+  lang?: string;
+}
+
+const {
+  title,
+  description = SITE_DESCRIPTION,
+  excludeInnerLayout = false,
+  lang = "en",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} | {SITE_TITLE}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body>
+    <!--<div id="page-overlay" class="page-overlay visible-overlay bg-bg"></div> -->
+    <Header />
+    <MiniHeader />
+    {
+      excludeInnerLayout ? (
+        <slot />
+      ) : (
+        <InnerLayout>
+          <slot />
+        </InnerLayout>
+      )
+    }
+
+    <Footer />
+
+    <!--<script>
+      (function () {
+        const overlay = document.getElementById("page-overlay");
+        if (!overlay) return;
+        const overlayEl = overlay;
+        const TRANSITION_MS = 20;
+
+        function hideOverlay() {
+          requestAnimationFrame(() =>
+            overlayEl.classList.remove("visible-overlay")
+          );
+        }
+
+        if (
+          document.readyState === "complete" ||
+          document.readyState === "interactive"
+        ) {
+          setTimeout(hideOverlay, 30);
+        } else {
+          document.addEventListener("DOMContentLoaded", hideOverlay);
+        }
+
+        document.addEventListener(
+          "click",
+          function (e) {
+            const target = e.target;
+            const el = target instanceof Element ? target : null;
+            const anchor = el ? el.closest("a") : null;
+            if (!anchor) return;
+
+            if (
+              anchor.getAttribute("target") &&
+              anchor.getAttribute("target") !== "_self"
+            )
+              return;
+            if (anchor.hasAttribute("download")) return;
+            const href = anchor.getAttribute("href");
+            if (!href) return;
+            if (
+              href.startsWith("#") ||
+              href.startsWith("mailto:") ||
+              href.startsWith("tel:")
+            )
+              return;
+
+            let url;
+            try {
+              url = new URL(href, location.href);
+            } catch (err) {
+              return;
+            }
+            if (url.origin !== location.origin) return;
+
+            if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+
+            if (url.pathname === location.pathname && url.hash !== "") return;
+
+            e.preventDefault();
+            overlayEl.classList.add("visible-overlay");
+
+            setTimeout(() => {
+              location.href = url.href;
+            }, TRANSITION_MS);
+          },
+          true
+        );
+
+        window.addEventListener("beforeunload", function () {
+          overlayEl.classList.add("visible-overlay");
+        });
+      })();
+    </script> -->
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #page-overlay.page-overlay,
+  .page-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity 200ms ease,
+      visibility 0s linear 200ms;
+  }
+
+  #page-overlay.visible-overlay,
+  .page-overlay.visible-overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition:
+      opacity 200ms ease,
+      visibility 0s linear 0s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #page-overlay,
+    .page-overlay {
+      transition: none !important;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import { YOUTUBE_URL } from "../consts";
+
+import HeaderDropdown from "./HeaderDropdown.astro";
+import HeaderLink from "./HeaderLink.astro";
+---
+
+<div
+  class="select-none flex flex-wrap md:flex-nowrap items-center space-x-0 md:space-x-4 w-full md:w-auto justify-center md:justify-start gap-2 md:gap-0"
+>
+  <HeaderLink href="/">Home</HeaderLink>
+  <HeaderLink href="/beliefs">Beliefs</HeaderLink>
+  <HeaderDropdown
+    title="Resources"
+    options={[
+      {
+        href: "/blog",
+        label: "Blog (W.I.P.)",
+        target: "_self",
+      },
+      {
+        href: "https://holyanimewars.blogspot.com/",
+        label: "The Holy Anime Wars",
+        target: "_blank",
+      },
+      {
+        href: "/tetragrammaton",
+        label: "יהוה Transliterations",
+        target: "_self",
+      },
+    ]}
+  />
+  <HeaderLink href={YOUTUBE_URL}>YouTube</HeaderLink>
+  <HeaderLink href="/salvation">Salvation</HeaderLink>
+</div>

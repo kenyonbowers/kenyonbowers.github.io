@@ -1,0 +1,19 @@
+---
+const { number } = Astro.props;
+---
+
+<style>
+  sup {
+    line-height: 0;
+    white-space: nowrap;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+<sup class="text-accent-1 text-sm"
+  ><a href={`#source-${number}`}>[{number}]</a></sup
+>

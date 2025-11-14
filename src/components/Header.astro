@@ -1,0 +1,29 @@
+---
+import logo from "../assets/logo.svg";
+import { SITE_TITLE } from "../consts";
+import HeaderContent from "./HeaderContent.astro";
+---
+
+<header
+  id="main-header"
+  class="z-10 flex flex-col md:flex-row justify-between items-center w-full h-auto py-3 px-5 lg:px-10 bg-accent-1 gap-3"
+>
+  <div
+    class="flex items-center w-full md:w-auto justify-center md:justify-between"
+  >
+    <a href="/" class="h-29 pb-3 px-2 w-auto">
+      <img
+        src={logo.src}
+        alt="Logo"
+        class="h-full drop-shadow-sm drop-shadow-white"
+      />
+    </a>
+  </div>
+
+  <span class="hidden md:inline text-white text-3xl font-light">
+    {SITE_TITLE}
+  </span>
+
+  <HeaderContent />
+</header>
+<div id="header-sentinel" class="bg-accent-1 h-px"></div>

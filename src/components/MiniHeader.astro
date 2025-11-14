@@ -1,0 +1,59 @@
+---
+import HeaderContent from "./HeaderContent.astro";
+---
+
+<div id="mini-header" class="mini-header h-18 bg-accent-1" aria-hidden="true">
+  <div
+    class="max-w-screen-lg mx-auto flex items-center justify-center md:justify-between px-5 py-auto h-full"
+  >
+    <div class="hidden md:block"></div>
+    <HeaderContent />
+  </div>
+
+  <style>
+    :global(#mini-header) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      transform: translateY(-100%);
+      transition: transform 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      z-index: 20;
+    }
+    :global(#mini-header.visible) {
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const mini = document.getElementById("mini-header");
+      const sentinel = document.getElementById("header-sentinel");
+
+      if (!mini || !sentinel) return;
+
+      const toggle = (show: any) => {
+        mini.classList.toggle("visible", show);
+        mini.setAttribute("aria-hidden", show ? "false" : "true");
+      };
+
+      if ("IntersectionObserver" in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            toggle(!entries[0].isIntersecting);
+          },
+          { threshold: 0 }
+        );
+        io.observe(sentinel);
+      } else {
+        const onScroll = () => {
+          toggle(sentinel.getBoundingClientRect().top <= 0);
+        };
+        //@ts-expect-error
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      }
+    });
+  </script>
+</div>

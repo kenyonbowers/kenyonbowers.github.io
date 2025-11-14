@@ -1,0 +1,55 @@
+---
+import InnerLayout from "../../layouts/InnerLayout.astro";
+import Layout from "../../layouts/Layout.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout
+  title={post.data.title}
+  description={post.data.description}
+  excludeInnerLayout={true}
+>
+  <div class="w-1/2 mx-auto mt-15">
+    <div class="text-center">
+      <h1>{post.data.title}</h1>
+      <div>
+        <span class="text-accent-1">{post.data.author}</span>
+        <br />
+        <span>
+          <FormattedDate date={post.data.createdDate} />
+          {
+            post.data.updatedDate && (
+              <>
+                <span> &bull; </span>
+                <span class="italic">
+                  Last updated <FormattedDate date={post.data.updatedDate} />
+                </span>
+              </>
+            )
+          }
+        </span>
+        <br />
+        <br />
+      </div>
+    </div>
+    <hr />
+  </div>
+  <InnerLayout excludeSidebar={false} sidebarData={{ tags: post.data.tags }}>
+    <div class="blog-post">
+      <Content />
+    </div>
+  </InnerLayout>
+</Layout>

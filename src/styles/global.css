@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-ml: 58rem;
+  --color-bg: var(--color-bg);
+  --color-card: var(--color-card);
+  --color-inner-card: var(--color-inner-card);
+  --color-header: var(--color-header);
+  --color-text: var(--color-text);
+  --color-text-light: var(--color-text-light);
+  --color-accent-1: var(--color-accent-1);
+  --color-accent-2: var(--color-accent-2);
+  --color-accent-3: var(--color-accent-3);
+}
+
+/*@media (prefers-color-scheme: light) {*/
+:root {
+  --color-bg: #fff;
+  --color-card: #f0f0f0;
+  --color-inner-card: #dce3ec;
+  --color-header: #3a2f23;
+  --color-text: #000000;
+  --color-text-light: rgb(94, 94, 94);
+  --color-accent-1: #2a394f;
+  --color-accent-2: #2a394f;
+  --color-accent-3: #2a394f;
+}
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0d1117;
+    --color-card: oklch(20% 0.005 247.839);
+    --color-inner-card: oklch(14% 0.004 247.839);
+    --color-header: #f3f4f6;
+    --color-text: oklch(88% 0.015 259.733);
+    --color-text-light: oklch(70% 0.02 264.364);
+    --color-accent-1: oklch(0.3588 0.0982 256.9);
+    --color-accent-2: oklch(0.4652 0.13 255.21);
+    --color-accent-3: #a52a2d;
+  }
+}*/
+
+body {
+  /*font-family: "Noto Serif JP";*/
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.font-japanese {
+  font-family: "Noto Serif JP", serif;
+}
+
+blockquote {
+  margin-left: 1rem;
+  border-left: 2px solid #ccc;
+  padding-left: 1rem;
+}
+
+a.link {
+  color: var(--color-accent-1);
+  text-decoration: underline;
+}
+
+@layer base {
+  /*p,
+  blockquote {
+    @apply mb-4;
+  }*/
+  h1 {
+    @apply mb-5 text-5xl font-extrabold;
+  }
+  h2 {
+    @apply mb-2 text-xl font-bold;
+  }
+
+  .blog-post p {
+    @apply mb-[2em] mt-3;
+  }
+  .blog-post img {
+    @apply rounded-2xl;
+  }
+}

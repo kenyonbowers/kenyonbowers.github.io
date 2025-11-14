@@ -1,0 +1,46 @@
+---
+interface Props {
+  date: any;
+}
+
+const { date } = Astro.props;
+
+const bibleMonthNames = {
+  1: "Abib/Nisan",
+  2: "Zif",
+  3: "Sivan",
+  4: "fourth month",
+  5: "fifth month",
+  6: "Elul",
+  7: "Ethanim",
+  8: "Bul",
+  9: "Chisleu",
+  10: "Tebeth",
+  11: "Sebat",
+  12: "Adar",
+};
+
+function getOrdinal(n: number): string {
+  const suffixes = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (suffixes[(v - 20) % 10] || suffixes[v] || suffixes[0]);
+}
+
+let biblicalDate = "";
+
+if (date.month === 4 || date.month === 5) {
+  //@ts-expect-error
+  biblicalDate = `${getOrdinal(date.day)} day of the ${bibleMonthNames[date.month]} ${date.year}`;
+} else {
+  //@ts-expect-error
+  biblicalDate = `${date.day} ${bibleMonthNames[date.month]} ${date.year}`;
+}
+---
+
+<style>
+  span {
+    margin-bottom: 0.5em;
+    color: rgb(var(--gray));
+  }
+</style>
+<span>{biblicalDate}</span>

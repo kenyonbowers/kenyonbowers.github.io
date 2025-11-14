@@ -1,0 +1,129 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+const { title = "Menu", options = [] } = Astro.props;
+---
+
+<div class="relative dropdown">
+  <HeaderLink
+    href={`/${title.toLowerCase()}`}
+    class="flex items-center md:space-x-1 cursor-pointer dropdown-button"
+    nonLink={true}
+  >
+    <span>{title}</span><span
+      class="transition-transform duration-200 transform md:text-sm mt-[0.03rem] inline-block dropdown-arrow"
+      >▼</span
+    >
+  </HeaderLink>
+
+  <div
+    class="absolute top-full left-0 w-52 bg-card shadow-lg dark:shadow-accent-1 rounded-md overflow-hidden z-10 dropdown-menu opacity-0 invisible -translate-y-1 transition-all duration-200"
+  >
+    {
+      options.map((option: any, i: number) => (
+        <a
+          href={option.href}
+          target={option.target}
+          class={`block px-4 py-2 text-text hover:bg-inner-card ${
+            i === 0 ? "rounded-t-md" : ""
+          } ${i === options.length - 1 ? "rounded-b-md" : ""}`}
+        >
+          {option.label}
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let openMenu: HTMLElement | null = null;
+    let openArrow: HTMLElement | null = null;
+
+    const closeMenu = (
+      menu?: HTMLElement | null,
+      arrow?: HTMLElement | null
+    ) => {
+      const m = menu ?? openMenu;
+      const a = arrow ?? openArrow;
+      if (!m) return;
+      m.classList.remove("opacity-100", "visible", "translate-y-0");
+      m.classList.add("opacity-0", "invisible", "-translate-y-1");
+      if (a) a.classList.remove("rotate-180");
+      if (openMenu === m) {
+        openMenu = null;
+        openArrow = null;
+      }
+    };
+
+    const openGivenMenu = (menu: HTMLElement, arrow: HTMLElement) => {
+      if (openMenu && openMenu !== menu) closeMenu(openMenu, openArrow);
+      menu.classList.add("opacity-100", "visible", "translate-y-0");
+      menu.classList.remove("opacity-0", "invisible", "-translate-y-1");
+      arrow.classList.add("rotate-180");
+      openMenu = menu;
+      openArrow = arrow;
+    };
+
+    const dropdowns = Array.from(document.querySelectorAll(".dropdown"));
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector(
+        ".dropdown-button"
+      ) as HTMLElement | null;
+      const menu = dropdown.querySelector(
+        ".dropdown-menu"
+      ) as HTMLElement | null;
+      const arrow = dropdown.querySelector(
+        ".dropdown-arrow"
+      ) as HTMLElement | null;
+
+      if (button && menu && arrow) {
+        button.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          const isOpen = menu.classList.contains("visible");
+          if (isOpen) {
+            closeMenu(menu, arrow);
+          } else {
+            openGivenMenu(menu, arrow);
+          }
+        });
+      }
+    });
+
+    const handleDocumentClick = (e: Event) => {
+      const target = e.target as Node | null;
+      if (!(target instanceof Node)) return;
+      if (openMenu) {
+        const parentDropdown = openMenu.closest(".dropdown");
+        if (parentDropdown && !parentDropdown.contains(target)) {
+          closeMenu();
+        }
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+
+    const handleScroll = (e?: Event | null) => {
+      if (e && e.target && openMenu) {
+        const target = e.target as Node | null;
+        if (target instanceof Node) {
+          const parentDropdown = openMenu.closest(".dropdown");
+          if (parentDropdown && parentDropdown.contains(target)) {
+            return;
+          }
+        }
+      }
+      closeMenu();
+    };
+
+    document.addEventListener("scroll", handleScroll, true);
+    document.addEventListener("wheel", handleScroll, {
+      passive: true,
+      capture: true,
+    });
+    document.addEventListener("touchstart", handleScroll, {
+      passive: true,
+      capture: true,
+    });
+  });
+</script>
